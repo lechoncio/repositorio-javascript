@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM RK</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    
+    
+    
+</head>
+<body class="body">
+    <div id="grid-area"> 
+     
+        <div id="contFormulario">  
+            
+            <img class="logoMain" src="./images/logo.png" alt="">
+            <form id="formulario" action="">
+
+                <p class="formTitulo">Ketel Old School Skateboard Shop</p>
+                <div id="saludoUsuario"></div>                               
+                    
+                <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre </label>
+
+                <input id="nombre" type="text" class="form-control" name="nombre" placeholder="Nombre o Apodo">
+                </div>
+                                                
+                <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Edad </label>
+
+                <input id="edad" type="number" class="form-control"  placeholder= "solo números">
+                </div>
+
+                <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email </label>
+
+                <input id="correo" type="email" class="form-control"  placeholder="nombre@ejemplo.com">
+                </div>                                              
+            
+                <button class="btn btn-secondary" value="enviar" type="submit">Enviar</button>               
+                                                        
+            </form>
+        </div> <br><br>
+              
+        <div id="contenid"></div>
+            <div id="contenido"> <button id="logout" class="btn btn-link">Logout</button><hr>
+                <img class="logoMain" src="./images/logo.png" alt="logo">
+
+                <h1 id="main">SKATE CARRO DE COMPRAS</h1> 
+                <h3 id="descripcion">Aquí están lo mejores Skaters del PLaneta</h3>
+                <p class="parrafito">Bienvenido a Ketel Old School Skateboard Shop, los auténticos especialistas en skate y longboard desde hace más de 10 años. Nuestro equipo de expertos puede ayudarte a comprar a través de nuestra tienda online. Podemos resolver todas tus dudas para escoger tu primera tabla, cuales son las ruedas entre todos los tipos disponibles, qué ejes son los que mejor se adaptan a tu tabla y estilo de patinaje y también preparar contigo un skate montado a medida para que se adapte exactamente a tus necesidades de ride.
+
+
+                        </p>
+                <p class="sarassa">Puedes elegir también entre nuestro enorme catálogo para ajustar y personalizar al máximo todas las características de tu tabla.</p>
+            
+            
+                <div class="containerr">
+                    <div class="row">
+                    
+                        <main id="items" class="cardsss"><!-- Acá meto el array de Skates con append -->
+                        </main>
+                    
+                        <div><br><br>
+                        <ul id="carrito" class="list-group"></ul> <!-- acá imprimo el array de Elementos del carrito -->
+                    </div>
+                                
+                    <p class="text-right">Total: $ <span id="total"></span></p> <!-- acá meto el precio total -->
+                    
+                    <div>
+                        <button id="boton-comprar" class="btn btn-primary">Comprar lo seleccionado</button> <hr>
+                    
+                        <button id="boton-vaciar" class="btn btn-secondary">Borrar carrito</button>  <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+    </div>  
+    
+
+
+
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>     
+    <script src="./js/dom.js"></script>
+    <script src="./js/storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
