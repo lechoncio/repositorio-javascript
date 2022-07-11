@@ -79,7 +79,7 @@ formulario.addEventListener('submit', (e) => {
 //  STRINGIFY + SUBIR AL LOCAL STORAGE
   
 localStorage.setItem("productosDisponibles", JSON.stringify(baseDeDatos)); //acá guardo todos los productos disponibles en el local storage
-localStorage.setItem("productosCarrito", JSON.stringify(carrito));
+//localStorage.setItem("productosCarrito", JSON.stringify(carrito));
 
 //  TRAER DEL LOCAL STORAGE +  PARSE
 

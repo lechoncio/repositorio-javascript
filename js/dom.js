@@ -1,4 +1,4 @@
-//entrega martes 21-06 Modificando el HTML desde js
+
 
 //Acá modifico el titulo h1 (le cambio el texto original)
 const titulo = document.getElementById('main'); 
@@ -14,176 +14,8 @@ console.log(subTitulo.innerText);
 subTitulo.innerHTML = '<h4>A continuación Ud. podrá ver los productos disponibles en nuestra tienda</h4>';
 console.log(subTitulo.innerText);
 
-//Acá traigo los 9 skaters (H2)
-const skaters = document.getElementsByTagName('h2'); 
-console.log(skaters);
-console.log(skaters[0]);//traigo el nombre de uno de los skaters
-console.log(skaters[2]);//otro
-console.log(skaters[8]);//y otro
+  let baseDeDatos = [];
 
-//traigo elementos por clase creando un array
-const profesionales = document.getElementsByClassName('cards'); 
-console.log(profesionales);
-
-for (const profesional of profesionales) {
-    console.log(profesional);
-    //profesional.innerHTML = '<h2>AHORA SON todos WHISKIES y RONES</h2>';
-  }//si activo lo de arriba modifico todos los cards
-
-let elementByQueryId = document.querySelector('#descripcion');
-let elementByQueryClass = document.querySelector('.parrafito');
-let elementsByQueryClass = document.querySelectorAll('.nombre');
-
-console.log(elementByQueryId);
-console.log(elementByQueryClass);
-console.log(elementsByQueryClass);
-
-const baseDeDatos = [
-    {
-        id: 1,
-        nombre: 'Santa Cruz Dollar Flame',
-        descripcion:'Santa Cruz Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 17999,
-        imagen: './images/SKATESANTACRUZ1.png'
-    },
-    {
-        id: 2,
-        nombre: 'Santa Cruz Crane Dot',
-        descripcion:'Santa Cruz Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 24999,
-        imagen: './images/SKATESANTACRUZ2.png'
-    },
-    {
-        id: 3,
-        nombre: 'Santa Cruz Rad Dot',
-        descripcion:'Santa Cruz Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 24999,
-        imagen: './images/SKATESANTACRUZ3.png'
-    },
-    {
-        id: 4,
-        nombre: 'Santa Cruz Lucky Cat',
-        descripcion:'Santa Cruz Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 17999,
-        imagen: './images/SKATESANTACRUZ4.png'
-    },
-    {
-        id: 5,
-        nombre: 'Santa Cruz Wooten',
-        descripcion:'Santa Cruz Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 17999,
-        imagen: './images/SKATESANTACRUZ5.png'
-    },
-    {
-        id: 6,
-        nombre: 'Creature Erosion',
-        descripcion:'Creature Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 24999,
-        imagen: './images/SKATECREATURE1.png'
-    },
-    {
-        id: 7,
-        nombre: 'Creature Russell Skull',
-        descripcion:'Creature Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 17999,
-        imagen: './images/SKATECREATURE2.png'
-    },
-    {
-        id: 8,
-        nombre: 'Creature Russell',
-        descripcion:'Creature Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 17999,
-        imagen: './images/SKATECREATURE3.png'
-    },
-    {
-        id: 9,
-        nombre: 'Creature Martinez',
-        descripcion:'Creature Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 17999,
-        imagen: './images/SKATECREATURE4.png'
-    },
-    {
-        id: 10,
-        nombre: 'Creature Deathcard',
-        descripcion:'Creature Deck, Fabricada con 7 capas de maple canadiense prensado individualmente para una mayor resistencia de la misma',
-        precio: 24999,
-        imagen: './images/SKATECREATURE5.png'
-    },
-    {
-        id: 11,
-        nombre: 'Santa Cruz Flier Hand',
-        descripcion:'Santa Cruz Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-        precio: 34999,
-        imagen: './images/COMPLETESANTACRUZ1.png'
-    },
-    {
-        id: 12,
-        nombre: 'Santa Cruz Screaming ',
-        descripcion:'Santa Cruz Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-        precio: 34999,
-        imagen: './images/COMPLETESANTACRUZ2.png'
-    },
-    {
-        id: 13,
-        nombre: 'Santa Cruz Classic Dot',
-        descripcion:'Santa Cruz Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-        precio: 34999,
-        imagen: './images/COMPLETESANTACRUZ3.png'
-    },
-    {
-        id: 14,
-        nombre: 'Santa Cruz Dot',
-        descripcion:'Santa Cruz Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-        precio: 34999,
-        imagen: './images/COMPLETESANTACRUZ4.png',
-    },
-    {
-        id: 15,
-        nombre: 'Santa Cruz Flier Dot',
-        descripcion:'Santa Cruz Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-        precio: 34999,
-        imagen: './images/COMPLETESANTACRUZ5.png'
-    },
-    {
-      id: 16,
-      nombre: 'Creature Prowler',
-      descripcion:'Creature Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-      precio: 34999,
-      imagen: './images/COMPLETECREATURE1.png'
-    },
-    {
-      id: 17,
-      nombre: 'Creature Deathcard',
-      descripcion:'Creature Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-      precio: 34999,
-      imagen: './images/COMPLETECREATURE2.png'
-    },
-    {
-      id: 18,
-      nombre: 'Creature Metallic Logo',
-      descripcion:'Creature Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-      precio: 34999,
-      imagen: './images/COMPLETECREATURE3.png'
-    },
-    {
-      id: 19,
-      nombre: 'Creature Mummy Logo',
-      descripcion:'Creature Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-      precio: 34999,
-      imagen: './images/COMPLETECREATURE4.png'
-    },
-    {
-      id: 20,
-      nombre: 'Creature Large Logo',
-      descripcion:'Creature Complete, Skateboard pre armado con los mejores productos de la marca, Hecha de 7 capas de maple canadiense',
-      precio: 34999,
-      imagen: './images/COMPLETECREATURE5.png'
-    },
-      
-  ];
-
-  //Nuevas pruebas para crear el carrito de compras con Bootstrap
-  
   let carrito = [];  //clase 10 JSON y LOCAL STORAGE este voy a usar para mandar el carrito al local storage
   const divisa = '$';   //aca creo el signo pesos para agregar a los precios de los skates
   const DOMitems = document.querySelector('#items'); //constante DOMitems es el contenido dentro del id #items
@@ -191,12 +23,14 @@ const baseDeDatos = [
   const DOMtotal = document.querySelector('#total'); //constante DOMtotal es el contenido dentro del id #total
   const DOMbotonVaciar = document.querySelector('#boton-vaciar'); //constante DOMbotonVaciar es el contenido dentro del id #boton-vaciar
 
+  //AJAX Y FETCH clase 15 
   
-  
-   // acá abajo creo la FUNCION que me renderiza las tarjetas con sus componentes 
-  
-   function renderizarSkates() {
-    baseDeDatos.forEach((info) => {
+  fetch("./json/skates.json")  //hago un fetch desde el archivo json
+  .then(resp => resp.json())    //le digo el formato 
+  .then(objetos => {   
+  objetos.forEach(objeto => baseDeDatos.push(objeto))  //le doy un push de los objetos importados a la baseDeDatos
+
+    baseDeDatos.forEach((info) => {    // para cada objeto todo lo de abajo 
 
         // Tarjeta principal
         const miNodo = document.createElement('div');  // creo miNodo con elemento div que va a ser el contenedor miNodo
@@ -243,30 +77,29 @@ const baseDeDatos = [
         miNodo.append(miNodoCardBody); //dentro de "miNodo" hago el append de todo el "miNodoCardBody" con todos sus componentes (los 5 de arriba)
         DOMitems.append(miNodo); // acá hago el append de "miNodo" con todos sus componentes (miNodoCardBody y sus 5 componentes)
     });
-  }
+  
+  })
   
     // Abajo genero evento para añadir un producto al carrito de la compra
  
   function agregarSkateAlCarrito(evento) {   //la funcion de "agregarSkateAlCarrito" se ejecuta a partir 
                                                 //del click en el boton "agregar a carrito" y va a hacer push al array "carrito" del 
-                                                //item seleccionado a patir del atributo 'marcaID', que creamos en la funcion "renderizarSkates"
+                                                //item seleccionado a patir del atributo 'marcaID', que creamos cuando renderizamos los obj del ecommerce
    carrito.push(evento.target.getAttribute('marcaID'))
     
 
-
-
-  Swal.fire({
-    width: "350px",    
-    heightAuto: true,
-    title: 'Item agregado!',   
-    imageUrl: './images/logo2.png',
-    imageWidth: 250,
-    imageHeight: 125,
-    padding: '1%',
-    color: '#ded7e6',
-    background: '#48464b',
-    showConfirmButton: false,
-    timer: 1500
+    Swal.fire({            //  uso de librerías pop up confirmación de agregado al carrito
+      width: "350px",    
+      heightAuto: true,
+      title: 'Item agregado!',   
+      imageUrl: './images/logo2.png',
+      imageWidth: 250,
+      imageHeight: 125,
+      padding: '1%',
+      color: '#ded7e6',
+      background: '#48464b',
+      showConfirmButton: false,
+      timer: 1500
     
   })
 
@@ -286,7 +119,7 @@ const baseDeDatos = [
     //creo array carritoSinDuplicados con un "spread" (...) que imprime una lista de argumentos
     const carritoSinDuplicados = [...new Set(carrito)];  //set es unique (no repite)  // USO DE SPREAD "CLASE 12. Operadores Avanzados"
     
-    carritoSinDuplicados.forEach((item) => {        //para cada argumento......
+    carritoSinDuplicados.forEach((item) => {       
         
         const miItem = baseDeDatos.filter((itemBaseDatos) => {   //generamos const "miItem" que filtra el objeto del array..
           // ¿Coincide las id? Solo puede existir un caso           
@@ -311,12 +144,7 @@ const baseDeDatos = [
       ////////////acá va la creación del boton Pagar y su función////////////
        //////////////////////////
        //////////////////////////
-       //////////////////////////
-       //////////////////////////
-       //////////////////////////
-       //////////////////////////
-       //////////////////////////
-       //////////////////////////
+       
 
 
 
@@ -372,5 +200,5 @@ const baseDeDatos = [
   // Este es event listener de vaciar el carrito completo (vaciarCarrito)
   DOMbotonVaciar.addEventListener('click', vaciarCarrito);
   
-  renderizarSkates(); 
+ 
   renderizarCarrito();
